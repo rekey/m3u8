@@ -1,15 +1,9 @@
-FROM  alpine
+FROM  itisfoundation/puppeteer
 LABEL maintainer="Rekey <rekey@me.com>"
 
 WORKDIR /app/
 ENV TZ=Asia/Shanghai
 ADD ./app /app/
-
-RUN sed -i "s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g" /etc/apk/repositories && \
-    apk update && \
-    apk add nodejs npm curl && \
-    node -v && \
-    npm --verb i
 
 # ENTRYPOINT [ "./docker-entrypoint.sh" ]
 
