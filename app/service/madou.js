@@ -21,6 +21,7 @@ async function run(url) {
     const data = await madou.parse(url);
     storeSvc.infoUpdate(url, 'data', 1);
     console.log(url, 'data', 'done');
+    console.log(data);
     const nfoData = nfo.parse(data);
     const cateDir = path.resolve(mediaDir, data.maker);
     const movieDir = path.resolve(cateDir, data.key);
