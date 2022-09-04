@@ -31,8 +31,8 @@ async function parse(url) {
     };
 }
 
-parse('https://madou.club/mcy0065-%e9%9c%b8%e9%81%93%e8%a1%a8%e5%a7%90%e7%9a%84%e6%b7%ab%e4%b9%b1%e8%be%85%e5%af%bc.html')
-    .then(console.log);
+// parse('https://madou.club/mcy0065-%e9%9c%b8%e9%81%93%e8%a1%a8%e5%a7%90%e7%9a%84%e6%b7%ab%e4%b9%b1%e8%be%85%e5%af%bc.html')
+//     .then(console.log);
 
 module.exports = {
     parse
