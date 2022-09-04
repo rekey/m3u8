@@ -88,7 +88,7 @@ module.exports = {
                 try {
                     await run(url);
                 } catch (e) {
-                    console.erroe(url, 'err', e.message);
+                    console.error(url, 'err', e.message);
                     errorTime += 1;
                     await new Promise((resolve) => {
                         setTimeout(resolve, 10000 * errorTime);
