@@ -3,6 +3,7 @@
     "bson-objectid": "^2.0.3",
     "dayjs": "^1.11.5",
     "koa": "^2.13.4",
+    "koa-router": "^12.0.0",
     "m3u8_multi_downloader": "^1.1.5",
     "puppeteer": "^17.1.0",
     "request": "^2.88.2",
