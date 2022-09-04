@@ -20,8 +20,8 @@ const mediaDir = path.resolve(__dirname, '../media');
 async function run(url) {
     const data = await madou.parse(url);
     storeSvc.infoUpdate(url, 'data', 1);
+    console.log(url, 'data', 'done');
     const nfoData = nfo.parse(data);
-    storeSvc.infoUpdate(url, 'nfo', 1);
     const cateDir = path.resolve(mediaDir, data.maker);
     const movieDir = path.resolve(cateDir, data.key);
     if (!fs.existsSync(movieDir)) {
@@ -32,15 +32,19 @@ async function run(url) {
     fs.rmdirSync(movieDir);
     const xmlContent = xml.json2xml(JSON.stringify(nfoData), { compact: true, spaces: 4 });
     fs.writeFileSync(movieDir + `/movie.nfo`, xmlContent, 'utf-8');
+    storeSvc.infoUpdate(url, 'nfo', 1);
+    console.log(url, 'nfo', 'done');
     await new Promise((resolve, reject) => {
         const stream = fs.createWriteStream(movieDir + `/poster.jpg`);
         request(data.cover).pipe(stream).on("close", function (err) {
             if (err) {
                 reject(err);
+                console.log(url, 'image', 'err', err.message);
                 return;
             }
             resolve();
             storeSvc.infoUpdate(url, 'image', 1);
+            console.log(url, 'image', 'done');
         });
     });
     await new Promise((resolve, reject) => {
@@ -52,11 +56,13 @@ async function run(url) {
         }, (err, resp) => {
             if (err) {
                 reject(err);
+                console.log(url, 'video', 'err', err.message);
                 return;
             }
             storeSvc.infoUpdate(url, 'video', 1);
             fs.renameSync(movieDir + '/movie/movie.mp4', movieDir + '/movie.mp4');
             fs.rmdirSync(movieDir + '/movie');
+            console.log(url, 'video', 'done');
             resolve();
         });
     });
