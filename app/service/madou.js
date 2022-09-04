@@ -25,12 +25,12 @@ async function run(url) {
     const nfoData = nfo.parse(data);
     const cateDir = path.resolve(mediaDir, data.maker);
     const movieDir = path.resolve(cateDir, data.key);
+    fs.rmdirSync(movieDir);
     if (!fs.existsSync(movieDir)) {
         fs.mkdirSync(movieDir, {
             recursive: true,
         });
     }
-    fs.rmdirSync(movieDir);
     const xmlContent = xml.json2xml(JSON.stringify(nfoData), { compact: true, spaces: 4 });
     fs.writeFileSync(movieDir + `/movie.nfo`, xmlContent, 'utf-8');
     storeSvc.infoUpdate(url, 'nfo', 1);
