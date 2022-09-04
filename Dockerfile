@@ -7,7 +7,7 @@ ADD ./app /app/
 
 RUN sed -i "s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g" /etc/apk/repositories && \
     apk update && \
-    apk add nodejs npm curl ffmpeg && \
+    apk add nodejs npm curl ffmpeg openssl && \
     node -v && \
     npm --verb i
 
