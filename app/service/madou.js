@@ -25,7 +25,11 @@ async function run(url) {
     const nfoData = nfo.parse(data);
     const cateDir = path.resolve(mediaDir, data.maker);
     const movieDir = path.resolve(cateDir, data.key);
-    fs.rmdirSync(movieDir);
+    try {
+        fs.rmdirSync(movieDir);
+    } catch (e) {
+
+    }
     if (!fs.existsSync(movieDir)) {
         fs.mkdirSync(movieDir, {
             recursive: true,
