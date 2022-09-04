@@ -1,0 +1,7 @@
+.idea
+package-lock.json
+logs/*.log
+node_modules
+.git
+store
+media
