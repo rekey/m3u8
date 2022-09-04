@@ -3,7 +3,7 @@ LABEL maintainer="Rekey <rekey@me.com>"
 
 WORKDIR /app/
 ENV TZ=Asia/Shanghai
-ADD ./src /app/
+ADD ./app /app/
 
 RUN sed -i "s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g" /etc/apk/repositories && \
     apk update && \
