@@ -6,7 +6,7 @@ const dayjs = require("dayjs");
 const downloader = require('../lib/m3u8_multi_downloader');
 
 const storeSvc = require('./store');
-const madou = require('../lib/madou');
+const madou = require('../lib/madou_c');
 const nfo = require('../lib/nfo');
 
 const log = console.log;
