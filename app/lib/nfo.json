@@ -1,0 +1,87 @@
+{
+    "_declaration": {
+        "_attributes": {
+            "version": "1.0",
+            "encoding": "utf-8",
+            "standalone": "yes"
+        }
+    },
+    "movie": {
+        "plot": {
+            "_text": "plot"
+        },
+        "customrating": {
+            "_text": "JP-18+"
+        },
+        "lockdata": {
+            "_text": "false"
+        },
+        "dateadded": {
+            "_text": "2021-09-09 11:25:58"
+        },
+        "title": {
+            "_text": "title"
+        },
+        "originaltitle": {
+            "_text": "title"
+        },
+        "year": {
+            "_text": "2018"
+        },
+        "sorttitle": {
+            "_text": "title"
+        },
+        "mpaa": {
+            "_text": "JP-18+"
+        },
+        "premiered": {
+            "_text": "2018-06-23"
+        },
+        "releasedate": {
+            "_text": "2018-06-23"
+        },
+        "genre": [
+            {
+                "_text": "中文字幕"
+            }
+        ],
+        "studio": {
+            "_text": "変态绅士倶楽部"
+        },
+        "tag": [
+            {
+                "_text": "中文字幕"
+            }
+        ],
+        "art": {
+            "poster": {
+                "_text": "poster.jpg"
+            },
+            "fanart": [
+            ]
+        },
+        "actor": [
+        ],
+        "poster": {
+            "_text": "poster.jpg"
+        },
+        "thumb": {
+            "_text": "thumb.jpg"
+        },
+        "fanart": {
+            "_text": "fanart.jpg"
+        },
+        "maker": {
+            "_text": "変态绅士倶楽部"
+        },
+        "label": {
+            "_text": "title"
+        },
+        "release": {
+            "_text": "2018-06-23"
+        },
+        "cover": {
+            "_text": "poster.jpg"
+        }
+    }
+}
