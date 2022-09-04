@@ -3,9 +3,8 @@ const ObjectID = require("bson-objectid");
 const urlLib = require('url');
 
 const options = {
-    ignoreHTTPSErrors: true,
-    headless: false,
-    devtools: true,
+    headless: true,
+    devtools: false,
     defaultViewport: {
         width: 0,
         height: 0,
