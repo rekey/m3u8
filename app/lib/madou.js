@@ -12,7 +12,7 @@ const options = {
     args: [
         '--start-maximized',
         '--ignore-urlfetcher-cert-requests',
-        // '--no-sandbox'
+        '--no-sandbox'
     ],
 };
 const getBrowser = puppeteer.launch(options);
