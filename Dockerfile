@@ -5,6 +5,8 @@ WORKDIR /app/
 ENV TZ=Asia/Shanghai
 ADD ./app /app/
 
+RUN node -v && npm --verb i
+
 # ENTRYPOINT [ "./docker-entrypoint.sh" ]
 
 VOLUME /app/store
