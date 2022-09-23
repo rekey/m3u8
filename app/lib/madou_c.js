@@ -6,7 +6,7 @@ const cheerio = require('cheerio');
 async function parse(url) {
     const html = (await curl(url)).toString();
     const key = html.match(/share\/[0-9a-z]+/)[0].replace('share/', '');
-    const cover = html.match(/https:\/\/madou\.club\/covers\/[0-9]+\/[0-9]+\/[0-9a-z]+\.[a-z]+/)[0];
+    const cover = html.match(/https:\/\/madou\.club\/covers\/.*\'/)[0].replace("'", '');
     const shareUrl = `https://dash.madou.club/share/${key}`;
     const shareHtml = (await curl(shareUrl)).toString();
     const token = shareHtml.match(/var token = "(.*)";/ig)[0].replace('var token = "', '').replace('";', '').trim();
